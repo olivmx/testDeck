@@ -1,30 +1,66 @@
 ---
-title       : Test deck
-subtitle    : 
-author      : 
-job         : 
+title       : Body Mass Index Calculator
+subtitle    : 700
+author      : Oliverio Juarez
+job         : Courserian
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : mathjax            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## Body Mass Index
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+1. Body Mass Index is widely used in medicine and sports as an aproximate measure of the body fat percent of the body.
+
+2. While its number is not exactly body fat it does correlate directly to body fat measurements and since it's very easy to measure height and weight it's become the prefered method to screen for weight-related health problems.
+
+3. Use this BMI only as screening. It's not a medical diagnostic, but an usefull index to detect probability of health problems. Consult your physician for a full evaluation if find out to be outside the normal range.
 
 --- .class #id 
 
-## Slide 2
+## Use BMI with caution
+
+1. Though a good index, it is known to yield some problems in this circumstances.
+
+2. Body fat of women the same height as men it's usually highter.
+
+3. Athletes usually have more muscle wich weights more than fat so their BMI will yield higher, so is not a good indicator of unhealthy conditions.
 
 
-```r
-plot(1:10, 1:10)
+--- .class #id 
+
+## BMI Calculation
+1. Body Mass Index very easily calculated with this formula:
+$$ BMI = \frac{Weight_{kg}}{Height_{meters} ^2} $$
+
+2. If you are used to the english units the formula changes to:
+$$ BMI = \frac{Weight_{pounds}}{Height_{inches} ^2} * 703 $$
+
+3. The units of BMI are either $\frac{kg}{m^2}$ or $\frac{lb}{in^2}$ depending of the units used to calculate. 
+
+--- .class #id 
+
+## BMI Interpretation
+1. The usually accepted ranges for the BMI interpretation are:
+
+
+```
+##              BMI Weight_Status
+## 1     Below 18.5   Underweight
+## 2      18.5-24.9        Normal
+## 3      25.0-29.9    Overweight
+## 4 30.0 and Above         Obese
 ```
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+--- .class #id 
+
+## BMI 700
+
+In case you did wonder: Why BMI 700?  
+
+The 700 is just to distinguish this BMI form the -for sure more than 700- other BMI calculators in the assignament (lol).
 
 
